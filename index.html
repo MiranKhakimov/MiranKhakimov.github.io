@@ -21,9 +21,11 @@
 
 <script>
     function showText() {
-        var wordsData = ['asd', 'bfg', 'gpt']
+        var wordsData = ['asd', 'bfg', 'gpt'];
+        var randomIndex = Math.floor(Math.random() * 100 % 3);
+        let word = wordsData[randomIndex];
         var inputText = document.getElementById('textInput').value;
-        document.getElementById('outputText').textContent = "Вы ввели: " + inputText;
+        document.getElementById('outputText').textContent = "Прога нарандомила: " + word;
     }
 </script>
 
