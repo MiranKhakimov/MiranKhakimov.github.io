@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,13 +11,17 @@ html
 <form>
     <label for="textInput">Введите текст:</label>
     <input type="text" id="textInput">
-    <input type="button" value="Показать текст" onclick="showText()">
+    <input type="button" value="Проверить слово" onclick="showText()">
 </form>
 
 <p id="outputText"></p>
+<p id="bull"></p>
+<p id="cow"></p>
+
 
 <script>
     function showText() {
+        var wordsData = ['asd', 'bfg', 'gpt']
         var inputText = document.getElementById('textInput').value;
         document.getElementById('outputText').textContent = "Вы ввели: " + inputText;
     }
