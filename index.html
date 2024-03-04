@@ -18,13 +18,16 @@ bly
 <p id="outputText"></p>
 <p id="bull"></p>
 <p id="cow"></p>
-
-
 <script>
-    function showText() {
+    function pickWord() {
         var wordsData = ['asd', 'bfg', 'gpt'];
         var randomIndex = Math.floor(Math.random() * 100 % 3);
         let word = wordsData[randomIndex];
+    }
+</script>
+    
+<script>
+    function showText() {
         var inputText = document.getElementById('textInput').value;
         document.getElementById('outputText').textContent = "Прога нарандомила: " + word;
     }
