@@ -18,11 +18,11 @@
 <p id="cow"></p>
 <script>
     var word = pickWord();
+    document.getElementById('outputText').textContent = word;
     function pickWord() {
         var wordsData = ['Ванна', 'Атака', 'Лопух'];
         var randomIndex = Math.floor(Math.random() * wordsData.lenght);
         var word = wordsData[randomIndex];
-        document.getElementById('outputText').textContent = word;
         return word;
     }
     
