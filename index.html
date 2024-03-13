@@ -13,7 +13,7 @@
     <input type="button" value="Проверить слово" onclick="showText(word)">
 </form>
 
-<p id="outputText">.</p>
+<p id="outputText"></p>
 <p id="bull"></p>
 <p id="cow"></p>
 <script>
@@ -22,7 +22,7 @@
         var wordsData = ['Ванна', 'Атака', 'Лопух'];
         var randomIndex = Math.floor(Math.random() * wordsData.lenght);
         var word = wordsData[randomIndex];
-        document.getElementById('bull'). textContent = word;
+        document.getElementById('outputText').textContent = word;
         return word;
     }
     
@@ -44,6 +44,7 @@
                 }
             }
         }
+    }
         document.getElementById('bull').textContent = bull;
         document.getElementById('cow').textContent = cow;
         document.getElementById('outputText').textContent = "Прога нарандомила: " + word;
