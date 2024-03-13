@@ -40,7 +40,7 @@
 			else{
 				if secret[i] in guess{
 					cow++;
-					guess[guess.index(secret[i])] = "Q";
+					guess[guess.findIndex(secret[i])] = "Q";
             }}
         }
         document.getElementById('outputText').textContent = "Прога нарандомила: " + word;
