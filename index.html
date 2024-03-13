@@ -10,13 +10,14 @@
 <form>
     <label for="textInput">Введите текст:</label>
     <input type="text" id="textInput">
-    <input type="button" value="Проверить слово" onclick="tryWord(word)">
+    <input type="button" id="guessButton" value="Проверить слово">
 </form>
-
 <p id="outputText"></p>
 <p id="bull"></p>
 <p id="cow"></p>
 <script>
+document.getElementById("guessButton").addEventListener("click", tryWord(word) {
+    gotoNode(result.name); }, false);
     function pickWord() {
         var wordsData = ['Ванна', 'Атака', 'Лопух'];
         var randomIndex = Math.floor(Math.random() * wordsData.lenght);
