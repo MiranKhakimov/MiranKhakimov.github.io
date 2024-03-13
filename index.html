@@ -36,9 +36,9 @@
 				guess[i] = "Q";
             }
 			else{
-				if (secret[i] in guess){
+				if (guess.includes(secret[i])){
 					cow++;
-					guess[guess.findIndex(secret[i])] = "Q";
+					guess[guess.indexOf(secret[i])] = "Q";
                 }
             }
         }
