@@ -34,12 +34,12 @@
         var cow = 0;
         for var i in secret{
 			if secret[i] == guess[i]{
-				bull += 1;
+				bull++;
 				guess[i] = "Q";
             }
 			else{
 				if secret[i] in guess{
-					cow += 1;
+					cow++;
 					guess[guess.index(secret[i])] = "Q";
             }}
         }
