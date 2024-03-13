@@ -31,12 +31,12 @@
         var bull = 0;
         var cow = 0;
         for var i in secret{
-			if secret[i] == guess[i]{
+			if (secret[i] == guess[i]){
 				bull++;
 				guess[i] = "Q";
             }
 			else{
-				if secret[i] in guess{
+				if (secret[i] in guess){
 					cow++;
 					guess[guess.findIndex(secret[i])] = "Q";
                 }
