@@ -5,32 +5,32 @@ bly
     <meta name="viewport" content="width=device-width, initial-scale=2" /> 
     <title>Простой сайт с текстовым полем</title>
 </head>
-<body onload=pickWord()>
-    
+<body>
+var g = pickWord();
 <h1>Простой сайт с текстовым полем</h1>
 
 <form>
     <label for="textInput">Введите текст:</label>
     <input type="text" id="textInput">
-    <input type="button" value="Проверить слово" onclick="showText()">
+    <input type="button" value="Проверить слово" onclick="showText(word)">
 </form>
 
 <p id="outputText">.</p>
 <p id="bull"></p>
 <p id="cow"></p>
 <script>
+    var word = pickWord();
     function pickWord() {
         var wordsData = ['asd', 'bfg', 'gpt'];
         var randomIndex = Math.floor(Math.random() * 3);
         var word = wordsData[randomIndex];
         document.getElementById('bull'). textContent = word;
+        return word;
     }
-</script>
     
-<script>
-    function showText() {
+    function showText(cword) {
          //var inputText = document.getElementById('textInput').value;
-        document.getElementById('outputText').textContent = "Прога нарандомила: " + word;
+        document.getElementById('outputText').textContent = "Прога нарандомила: " + cword;
     }
 </script>
 
