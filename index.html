@@ -27,7 +27,20 @@
     }
     
     function tryWord(word) {
-         //var inputText = document.getElementById('textInput').value;
+        var inputText = document.getElementById('textInput').value;
+        var guess = [...inputText];
+        var secret = [...word];
+        for var i in secret{
+			if secret[i] == guess[i]{
+				bull += 1;
+				guess[i] = "Q";
+            }
+			else{
+				if secret[i] in guess{
+					cow += 1;
+					guess[guess.index(secret[i])] = "Q";
+            }}
+        }
         document.getElementById('outputText').textContent = "Прога нарандомила: " + word;
     
 </script>
