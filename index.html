@@ -41,8 +41,11 @@
 				if secret[i] in guess{
 					cow++;
 					guess[guess.findIndex(secret[i])] = "Q";
-            }}
+                }
+            }
         }
+        document.getElementById('bull').textContent = bull;
+        document.getElementById('cow').textContent = cow;
         document.getElementById('outputText').textContent = "Прога нарандомила: " + word;
     
 </script>
