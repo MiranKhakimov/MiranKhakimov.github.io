@@ -16,15 +16,14 @@
 <p id="bull"></p>
 <p id="cow"></p>
 <script>
-document.getElementById("guessButton").addEventListener("click", tryWord(word) {
-    gotoNode(result.name); }, false);
     function pickWord() {
         var wordsData = ['Ванна', 'Атака', 'Лопух'];
         var randomIndex = Math.floor(Math.random() * wordsData.lenght);
         var word = wordsData[randomIndex];
         return word;
     }
-    
+    var word = pickWord();
+    document.getElementById("guessButton").addEventListener("click", function(){ tryWord(word); }, false);
     function tryWord(word) {
         var inputText = document.getElementById('textInput').value;
         var guess = [...inputText];
@@ -46,7 +45,6 @@ document.getElementById("guessButton").addEventListener("click", tryWord(word) {
         document.getElementById('bull').textContent = bull.toString();
         document.getElementById('cow').textContent = cow.toString();
     }
-    var word = pickWord();
     document.getElementById('outputText').textContent = word;
 </script>
 </body>
