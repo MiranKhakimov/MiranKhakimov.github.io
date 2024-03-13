@@ -19,8 +19,8 @@
 <script>
     var word = pickWord();
     function pickWord() {
-        var wordsData = ['asd', 'bfg', 'gpt'];
-        var randomIndex = Math.floor(Math.random() * 3);
+        var wordsData = ['Ванна', 'Атака', 'Лопух'];
+        var randomIndex = Math.floor(Math.random() * wordsData.lenght);
         var word = wordsData[randomIndex];
         document.getElementById('bull'). textContent = word;
         return word;
@@ -30,6 +30,8 @@
         var inputText = document.getElementById('textInput').value;
         var guess = [...inputText];
         var secret = [...word];
+        var bull = 0;
+        var cow = 0;
         for var i in secret{
 			if secret[i] == guess[i]{
 				bull += 1;
