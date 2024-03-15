@@ -17,7 +17,11 @@
 	input[type=text]:focus {
 	border: 3px solid #555;
 	}
-
+	
+	.g{
+	text-align: center;
+	}
+	
 	.prevent-select {
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
@@ -59,10 +63,9 @@
     <title>Быки и коровы</title>
 </head>
 <body>
-<h1 class="prevent-select">Быки и коровы</h1>
+<h1 class="prevent-select g">Быки и коровы</h1>
 
 <form>
-    <label class="prevent-select" for="textInput">Введите текст:</label>
     <input type="text" id="textInput">
     <input type="button" class="button button5" id="guessButton" value="Проверить слово">
 </form>
@@ -95,7 +98,6 @@
 		}
 		else{
 			document.getElementById("guessButton").value = 'Проверить слово';
-			return 0;
 		}
         var secret = [...word];
         var bull = 0;
