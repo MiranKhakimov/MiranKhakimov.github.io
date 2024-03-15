@@ -3,7 +3,29 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=2" /> 
 <style>
+	input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+	}
+	
+	input[type=text]:focus {
+	border: 3px solid #555;
+	}
+
+	.prevent-select {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+	}
+	
 	.button {
+	user-select: none;
 	background-color: #04AA6D; /* Green */
 	border: none;
 	color: white;
@@ -37,12 +59,12 @@
     <title>Быки и коровы</title>
 </head>
 <body>
-<h1>Быки и коровы</h1>
+<h1 class="prevent-select">Быки и коровы</h1>
 
 <form>
-    <label for="textInput">Введите текст:</label>
+    <label class="prevent-select" for="textInput">Введите текст:</label>
     <input type="text" id="textInput">
-    <input class="button button5" id="guessButton" value="Отвал жопы">
+    <input type="button" class="button button5" id="guessButton" value="Проверить слово">
 </form>
 <p id="outputText"></p>
 <p id="bull"></p>
@@ -69,6 +91,10 @@
         var guess = [...inputText];
 		if (getWordsList().includes(inputText) == 0){
 			document.getElementById("guessButton").value = 'Не знаю такого слова';
+			return 0;
+		}
+		else{
+			document.getElementById("guessButton").value = 'Проверить слово';
 			return 0;
 		}
         var secret = [...word];
