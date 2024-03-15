@@ -96,7 +96,9 @@
 	
     var word = pickWord();
     document.getElementById("guessButton").addEventListener("click", function(){ tryWord(word); }, false);
-	
+	function refresh() {
+        window.location.reload();
+    }
     function tryWord(word) {
         var inputText = document.getElementById('textInput').value.trim().toUpperCase();
         var guess = [...inputText];
@@ -124,8 +126,14 @@
         }
         document.getElementById('bull').innerHTML = "Быки: " + bull.toString();
         document.getElementById('cow').innerHTML = "Коровы: " + cow.toString();
+        if (bull == 5){
+            document.getElementById('outputText').innerHTML = 'Верно!'
+            document.getElementById('guessButton').value = 'Ещё раз?'
+            document.getElementById("guessButton").addEventListener("click", function(){ refresh(); }, false);
+        }
+            
     }
-    document.getElementById('outputText').textContent = word;
+    
 </script>
 </body>
 </html>
