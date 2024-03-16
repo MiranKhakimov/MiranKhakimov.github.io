@@ -119,7 +119,7 @@
 				bull++;
 				guess[i] = "Q";
             }
-			else{
+		for (var i in secret) {
 				if (guess.includes(secret[i])){
 					cow++;
 					guess[guess.indexOf(secret[i])] = "Q";
