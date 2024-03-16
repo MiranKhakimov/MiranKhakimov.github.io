@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=2" /> 
 <style>
+
 	input[type=text] {
 	width: 100%;
 	padding: 12px 20px;
@@ -17,6 +18,16 @@
 	
 	input[type=text]:focus {
 	border: 3px solid #555;
+	}
+
+	.yellow{
+	    color:yellow;
+	}
+	.green{
+	    color:green;
+	}
+	.blue{
+		color:blue;
 	}
 	
 	.g{
@@ -79,8 +90,8 @@
     <input type="button" class="button button5 block" id="guessButton" value="Проверить слово">
 </form>
 <p id="outputText"></p>
-<p id="bull"></p>
-<p id="cow"></p>
+<p id="bull" class="green"></p>
+<p id="cow" class="yellow"></p>
 <script>
 
 	function getWordsList(){
