@@ -120,10 +120,9 @@
 				guess[i] = "Q";
             }}
 		for (var i in secret) {
-				if (guess.includes(secret[i])){
-					cow++;
-					guess[guess.indexOf(secret[i])] = "Q";
-                }
+			if (guess.includes(secret[i])){
+				cow++;
+				guess[guess.indexOf(secret[i])] = "Q";
             }
         }
         document.getElementById('bull').innerHTML = "Быки: " + bull.toString();
@@ -132,10 +131,7 @@
             document.getElementById('outputText').innerHTML = 'Верно!'
             document.getElementById('guessButton').value = 'Ещё раз?'
             document.getElementById("guessButton").addEventListener("click", function(){ refresh(); }, false);
-        }
-            
-    }
-    
+        }}
 </script>
 </body>
 </html>
