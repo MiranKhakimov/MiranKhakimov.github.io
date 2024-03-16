@@ -21,16 +21,18 @@
 	}
 
 	.yellow{
-	    background-color:orange;
+	    background-color:;
 		color:white;
 	}
 	.green{
-	    background-color:green;
+	    background-color:;
 		color:white;
 	}
 	.blue{
 		background-color:blue;
 	}
+	
+	
 	
 	.g{
 	text-align: center;
@@ -77,6 +79,13 @@
     text-align: center;
     }
 	
+	.block2 {
+	background-color:#555555;
+    display: block;
+    width: 100%;
+    text-align: center;
+    }
+	
 	body{
 		background-color: rgba();
 	}
@@ -92,8 +101,12 @@
     <input type="button" class="button button5 block" id="guessButton" value="Проверить слово">
 </form>
 <p id="outputText"></p>
-<p id="bull" class="green"></p>
-<p id="cow" class="yellow"></p>
+
+<div class="block2">
+	<p id="bull" class="green"></p>
+	<p id="cow" class="yellow"></p>
+ </div>
+
 <script>
 
 	function getWordsList(){
