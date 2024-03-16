@@ -21,13 +21,15 @@
 	}
 
 	.yellow{
-	    color:orange;
+	    background-color:orange;
+		color:white;
 	}
 	.green{
-	    color:green;
+	    background-color:green;
+		color:white;
 	}
 	.blue{
-		color:blue;
+		background-color:blue;
 	}
 	
 	.g{
@@ -125,7 +127,7 @@
 			return 0;
 		}
 		else{
-			document.getElementById("guessButton").value = 'Проверить слово';
+			document.getElementById("guessButton").click();
 		}
         var secret = [...word];
         var bull = 0;
