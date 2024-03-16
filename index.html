@@ -96,7 +96,7 @@
     }
 	
     var word = pickWord();
-    document.getElementById("outputText").value = word;
+    document.getElementById("outputText").innerHTML = word;
     document.getElementById("guessButton").addEventListener("click", function(){ tryWord(word); }, false);
 	function refresh() {
         window.location.reload();
