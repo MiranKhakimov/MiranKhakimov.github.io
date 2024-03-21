@@ -111,10 +111,8 @@
 </form>
 <p id="outputText"></p>
 <div class="block2">
-    <div class="logo">
 	<p id="bull" class="green"></p>
 	<p id="cow" class="yellow"></p>
-    </div>
 </div>
 <script>
 
@@ -133,11 +131,12 @@
     var word = pickWord();
     document.getElementById("guessButton").addEventListener("click", function(){ tryWord(word); }, false);
     document.getElementById("textInput").addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
+    if (event.key === "Enter") {
     event.preventDefault();
     tryWord(word);
   }
 });
+    
 	function refresh() {
         window.location.reload();
     }
@@ -171,7 +170,12 @@
             document.getElementById('outputText').innerHTML = 'Верно!'
             document.getElementById('guessButton').value = 'Ещё раз?'
             document.getElementById("guessButton").addEventListener("click", function(){ refresh(); }, false);
-        }}
+        }
+        const element = document.getElementById('bull')
+        element.classList.remove('logo'); // reset animation
+        void element.offsetWidth; // trigger reflow
+        element.classList.add('logo');
+    }
 </script>
 </body>
 </html>
