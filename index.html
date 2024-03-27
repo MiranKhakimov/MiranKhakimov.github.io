@@ -3,15 +3,18 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=2" /> 
 <style>
-	.logo {
-        -webkit-animation: flicker 2s infinite;
-        }
+	.logo{
+  color: black;
+  opacity:1;
+  animation-name: example;
+  animation-duration: 2s;
+}
 
-  @-webkit-keyframes flicker
-  {
-  50% {opacity:0;}
-  65% {opacity:1;}
-  }
+@keyframes example {
+  0%   {opacity:1;}
+  10%  {opacity:1;}
+  20%  {opacity:0;}
+  30%  {opacity:1;}}
 
 	input[type=text] {
 	width: 100%;
