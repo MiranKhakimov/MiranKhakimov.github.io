@@ -3,14 +3,26 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=2" /> 
 <style>
-	.logo{
+	.blink{
   color: black;
   opacity:1;
-  animation-name: example;
+  animation-name: flicker;
   animation-duration: 2s;
 }
 
-@keyframes example {
+@keyframes flicker {
+  0%  {opacity:1;}
+  5%  {opacity:0;}
+  10%  {opacity:1;}}
+
+	.wrongBlink{
+  color: red;
+  opacity:1;
+  animation-name: wrongFlicker;
+  animation-duration: 2s;
+}
+
+@keyframes wrongFlicker {
   0%  {opacity:1;}
   5%  {opacity:0;}
   10%  {opacity:1;}}
