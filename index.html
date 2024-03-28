@@ -156,12 +156,13 @@
 			if (secret[i] == guess[i]){
 				bull++;
 				guess[i] = "Q";
-            }}
-		for (var i in secret) {
+            }
+		else{
 			if (guess.includes(secret[i])){
 				cow++;
 				guess[guess.indexOf(secret[i])] = "Q";
             }
+		}
         }
         document.getElementById('bull').innerHTML = "Быки: " + bull.toString();
         document.getElementById('cow').innerHTML = "Коровы: " + cow.toString();
