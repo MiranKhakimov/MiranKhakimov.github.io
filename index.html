@@ -191,14 +191,17 @@
             document.getElementById("guessButton").addEventListener("click", function(){ refresh(); }, false);
         }
         const element = document.getElementById('bull')
-        element.classList.remove('logo'); // reset animation
+        element.classList.remove('blinkRed')
+        element.classList.remove('blink'); // reset animation
         void element.offsetWidth; // trigger reflow
-        element.classList.add('logo');
+        element.classList.add('blink');
 
 	const element2 = document.getElementById('cow')
-        element2.classList.remove('logo'); // reset animation
+	       element2.classList.remove('blinkRed')
+        element2.classList.remove('blink'); // reset animation
         void element2.offsetWidth; // trigger reflow
-        element2.classList.add('logo');
+        element2.classList.add('blink');
+        
     }
 </script>
 </body>
