@@ -109,6 +109,7 @@
 <form>
     <input type="text" id="textInput">
     <input type="button" class="button button5 block" id="guessButton" value="Проверить слово">
+    <input type="button" class="button button5 block" id="iampussybutton" value="Показать слово">
 </form>
 <p id="outputText"></p>
 <p id="bull"></p>
@@ -129,16 +130,16 @@
     var word = pickWord();
     document.getElementById("guessButton").addEventListener("click", function(){ tryWord(word); }, false);
     document.getElementById("textInput").addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-    event.preventDefault();
-    tryWord(word);
-  }
-});
+       if (event.key === "Enter") { event.preventDefault(); tryWord(word);}});
+    document.getElementById("iampussybutton").addEventListener("click", function(){ showWord(); }, false);
     
 	function refresh() {
         window.location.reload();
     }
-	
+
+    function showWord() {
+	    document.getElementById('outputText').innerHtML = word;
+    }
     function tryWord(word) {
         var inputText = document.getElementById('textInput').value.trim().toUpperCase();
         var guess = [...inputText];
