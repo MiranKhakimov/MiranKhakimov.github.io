@@ -9,6 +9,12 @@
   animation-name: flicker;
   animation-duration: 2s;
 }
+    .blinkRed{
+		color:red;
+		opacity:1;
+		animation-name: flicker;
+		animation-duration: 2s;
+	}
 
 @keyframes flicker {
   0%  {opacity:1;}
@@ -146,16 +152,14 @@
 		if (getWordsList().includes(inputText) == 0){
 			document.getElementById("guessButton").value = 'Не знаю такого слова';
 			const element = document.getElementById('bull')
-                        element.classList.remove('logo'); // reset animation
+            element.classList.remove('blinkRed'); // reset animation
 			void element.offsetWidth; // trigger reflow
-			element.classList.add('logo');
+			element.classList.add('blinkRed');
 			
 			const element2 = document.getElementById('cow')
-			element2.classList.remove('logo'); // reset animation
+			element2.classList.remove('blinkRed'); // reset animation
 			void element2.offsetWidth; // trigger reflow
-			element2.classList.add('logo');
-			element.color = red;
-			element2.color = red;
+			element2.classList.add('blinkRed');
 			return 0;
 		}
 		else{
