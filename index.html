@@ -57,7 +57,7 @@
 	
 	.button {
 	display: block;
-    width: 100%;
+        width: 100%;
 	background-color: #04AA6D; /* Green */
 	border: none;
 	color: white;
@@ -157,12 +157,14 @@
 			if (secret[i] == guess[i]){
 				bull++;
 				guess[i] = "Q";
+				secret[i] = "Q";
             }
 		}
-		for (var i in secret) {
-			if (guess.includes(secret[i])){
+		for (var i in secret){
+			if (guess.includes(secret[i]) && secret[i] != "Q"){
 				cow++;
 				guess[guess.indexOf(secret[i])] = "Q";
+				secret[i] = "Q";
             }
 		}
     
