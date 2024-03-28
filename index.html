@@ -15,18 +15,6 @@
   5%  {opacity:0;}
   10%  {opacity:1;}}
 
-	.wrongBlink{
-  color: red;
-  opacity:1;
-  animation-name: wrongFlicker;
-  animation-duration: 2s;
-}
-
-@keyframes wrongFlicker {
-  0%  {opacity:1;}
-  5%  {opacity:0;}
-  10%  {opacity:1;}}
-
 	input[type=text] {
 	width: 100%;
 	padding: 12px 20px;
@@ -157,6 +145,17 @@
         var guess = [...inputText];
 		if (getWordsList().includes(inputText) == 0){
 			document.getElementById("guessButton").value = 'Не знаю такого слова';
+			const element = document.getElementById('bull')
+                        element.classList.remove('logo'); // reset animation
+			void element.offsetWidth; // trigger reflow
+			element.classList.add('logo');
+			
+			const element2 = document.getElementById('cow')
+			element2.classList.remove('logo'); // reset animation
+			void element2.offsetWidth; // trigger reflow
+			element2.classList.add('logo');
+			element.color = red;
+			element2.color = red;
 			return 0;
 		}
 		else{
