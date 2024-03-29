@@ -189,7 +189,7 @@
         document.getElementById('bull').innerHTML = "Быки: " + bull.toString();
         document.getElementById('cow').innerHTML = "Коровы: " + cow.toString();
         if (bull == 5){
-            document.getElementById('outputText').innerHTML = 'Верно!'
+            document.getElementById('outputText').innerHTML = 'Верно, ' + word + '!'
             document.getElementById('guessButton').value = 'Ещё раз?'
             document.getElementById("guessButton").addEventListener("click", function(){ refresh(); }, false);
         }
