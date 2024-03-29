@@ -151,6 +151,7 @@
     }
     function tryWord(word) {
         var inputText = document.getElementById('textInput').value.trim().toUpperCase();
+		document.getElementById("outputText").innerHTML = inputText;
         var guess = [...inputText];
 		if (getWordsList().includes(inputText) == 0){
 			document.getElementById("guessButton").value = 'Не знаю такого слова';
@@ -178,6 +179,7 @@
 				secret[i] = "Q";
             }
 		}
+		
 		for (var i in secret){
 			if (guess.includes(secret[i]) && secret[i] != "Q"){
 				cow++;
@@ -199,11 +201,13 @@
         void element.offsetWidth; // trigger reflow
         element.classList.add('blink');
 
-	const element2 = document.getElementById('cow')
-	       element2.classList.remove('blinkRed')
+	    const element2 = document.getElementById('cow')
+	    element2.classList.remove('blinkRed')
         element2.classList.remove('blink'); // reset animation
         void element2.offsetWidth; // trigger reflow
         element2.classList.add('blink');
+
+		document.getElementById("textInput").reset();
         
     }
 </script>
